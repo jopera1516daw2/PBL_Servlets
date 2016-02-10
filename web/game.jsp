@@ -20,9 +20,10 @@
                 <br/>
                 <p>Ronda: <b>${game.ronda}</b></p>
                 <c:forEach items="${game.players}" var="player">
-                    <p><b>${player.token}</b> ha sacado un ${player.dau}. Ahora está en <b>${player.location.name}</b> i tiene <b>${player.money} euros</b></p>
+                    <p><b>${player.token}</b> ha sacado un ${player.tirada}. Ahora está en <b>${player.location.name}</b> (Posicion: ${player.posicion}) i tiene <b>${player.money} euros</b></p>
                 </c:forEach>
                 <p><a href="/PBL_Servlets/index.jsp">Reset Game</a></p>
+                
             </div>
             
             <br/>

@@ -6,11 +6,15 @@ public class Player {
 	protected Square location;
 	protected int money;
         protected int dau;
+        public int tirada =0;
+        public int posicion=0;
 	
-	public Player(String token, Square startSquare, int money) {
+	public Player(String token, Square startSquare, int money, int tirada, int posicion) {
 		this.location = startSquare;
 		this.token = token;
                 this.money = money;
+                this.tirada = tirada;
+                this.posicion = posicion;
 	}
 	
 	public Square getLocation() {
@@ -28,6 +32,22 @@ public class Player {
         public int getDau() {
             dau=(int) Math.floor(Math.random()*6 + 1);
             return dau;
+        }
+        
+        public int getPosicion() {
+            return posicion;
+        }
+
+        public void setPosicion(int posicion) {
+            this.posicion = posicion;
+        }
+
+        public int getTirada() {
+            return tirada;
+        }
+
+        public void setTirada(int tirada) {
+            this.tirada = tirada;
         }
         
 }

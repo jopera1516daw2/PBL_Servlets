@@ -52,7 +52,6 @@ public class MonopolyServlet extends HttpServlet {
 			request.getSession().setAttribute("game", game);
 		} 
 		else {
-                    
 			game.playRound(game.getRonda());
                         game.setRonda(game.getRonda()+1);
 		}
