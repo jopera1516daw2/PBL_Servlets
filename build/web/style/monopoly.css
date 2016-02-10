@@ -21,7 +21,38 @@ input[type="submit"]
 {
     border: 1px solid #006;
 }
+
 input[type="submit"]:hover {
     border: 1px solid #f00;
     background: #eef;
+}
+
+#mensaje{
+    margin-left: 425px;
+    margin-top:200px;
+    position:absolute;
+    
+}
+
+.box {
+    background: #A9F5A9;
+    border: 1px solid #000;
+    float: left;
+    height: 100px;
+    width: 95px;
+}
+
+.titulocelda{
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: -15px;
+}
+
+.token{
+    text-align: center;
+    font-size: 8px;
+}
+
+#pos1-1{
+    margin-top: 20px;
 }
