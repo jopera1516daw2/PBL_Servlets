@@ -8,6 +8,8 @@ public class Player {
         protected int dau;
         public int tirada =0;
         public int posicion=0;
+        public int rondacarcel;
+        public boolean carcel=false;
 	
 	public Player(String token, Square startSquare, int money, int tirada, int posicion) {
 		this.location = startSquare;
@@ -49,5 +51,23 @@ public class Player {
         public void setTirada(int tirada) {
             this.tirada = tirada;
         }
+
+        public int getRondacarcel() {
+            return rondacarcel;
+        }
+
+        public void setRondacarcel(int rondacarcel) {
+            this.rondacarcel = rondacarcel;
+        }
+
+        public boolean isCarcel() {
+            return carcel;
+        }
+
+        public void setCarcel(boolean carcel) {
+            this.carcel = carcel;
+        }
+        
+        
         
 }

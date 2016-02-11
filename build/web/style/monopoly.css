@@ -28,10 +28,10 @@ input[type="submit"]:hover {
 }
 
 #mensaje{
-    margin-left: 425px;
-    margin-top:200px;
+    margin-left: 430px;
+    margin-top:150px;
     position:absolute;
-    font-size: 12px;
+    font-size: 10px;
     
 }
 
@@ -39,13 +39,13 @@ input[type="submit"]:hover {
     background: #A9F5A9;
     border: 1px solid #000;
     float: left;
-    height: 100px;
-    width: 95px;
+    height: 65px;
+    width: 65px;
 }
 
 .titulocelda{
     text-align: center;
-    font-size: 14px;
+    font-size: 10px;
     margin-bottom: -15px;
 }
 
@@ -54,6 +54,36 @@ input[type="submit"]:hover {
     font-size: 8px;
 }
 
-#pos1-1{
+#pos{
     margin-top: 20px;
+}
+
+.ferrari{
+    text-align: center;
+    font-size: 8px;
+    color:red;
+}
+
+.hamburguesa{
+    text-align: center;
+    font-size: 8px;
+    color:orange;
+}
+
+.avion{
+    text-align: center;
+    font-size: 8px;
+    color:blue;
+}
+
+.zapatilla{
+    text-align: center;
+    font-size: 8px;
+    color:green;
+}
+
+.sombrero{
+    text-align: center;
+    font-size: 8px;
+    color:purple;
 }

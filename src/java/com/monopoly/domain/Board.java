@@ -13,7 +13,7 @@ public class Board {
 		   {"START",
 			"Barcelona",
 			"Santander",
-			"MULTA",
+			"MULTA1",
 			"Albacete",
 			"Melilla",
 			"Vigo",
@@ -21,19 +21,19 @@ public class Board {
 			"Valencia",
 			"Badajoz",
 			"Pamplona",
-			"MULTA",
+			"MULTA2",
 			"Madrid",
 			"Gran Canaria",
 			"PARKING",
 			"Málaga",
 			"Gijón",
-			"MULTA",
+			"MULTA3",
 			"Ceuta",
 			"Sevilla",
 			"Mallorca",
 			"VE A LA CÁRCEL",
 			"Bilbao",
-			"MULTA",
+			"MULTA4",
 			"Alicante",
 			"Sabadell",
 			"Elche",
@@ -46,25 +46,25 @@ public class Board {
                             squares.add(new Square("START",0));
                             break;
                     case 3:
-                            squares.add(new Square("MULTA",0));
+                            squares.add(new Square("MULTA1",0));
                             break;
                     case 7:
                             squares.add(new Square("CÁRCEL",0));
                             break;
                     case 11:
-                            squares.add(new Square("MULTA",0));
+                            squares.add(new Square("MULTA2",0));
                             break;
                     case 14:
                             squares.add(new Square("PARKING",0));
                             break;
                     case 17:
-                            squares.add(new Square("MULTA",0));
+                            squares.add(new Square("MULTA3",0));
                             break;
                     case 21:
                             squares.add(new Square("START",0));
                             break;
                     case 23:
-                            squares.add(new Square("MULTA",0));
+                            squares.add(new Square("MULTA4",0));
                             break;
                     default:
                             squares.add(new Square(SQUARE_NAMES[i],0));

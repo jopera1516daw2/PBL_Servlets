@@ -10,6 +10,7 @@
     <body>
         <center>
             <img src="images/Monopoly-logo.jpg" width="500" height="190"/>
+            </br>
             <form action="Play">
                 How many players? <input type="text" name="numberOfPlayers" size="1"/>
                 <input type="submit" value="Play!"/>
