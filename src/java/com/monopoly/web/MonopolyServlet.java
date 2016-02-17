@@ -23,7 +23,7 @@ public class MonopolyServlet extends HttpServlet {
      * Default constructor. 
      */
     public MonopolyServlet() {
-        // TODO Auto-generated constructor stub
+        // TODO Auto-generated constructor stub user.properties.file=/home/dgs/.netbeans/8.1/build.properties
     }
 
 	/**

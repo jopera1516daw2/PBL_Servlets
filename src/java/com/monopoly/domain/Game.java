@@ -10,7 +10,7 @@ public class Game {
 	public int ronda =1;
         public int turno =0;
         public int numjugadores=0;
-          public int p_money=0;
+        public int p_money=0;
           
 	public Game(int numberOfPlayers) {
                 numjugadores=numberOfPlayers;
@@ -20,7 +20,7 @@ public class Game {
 		
 		for (int i = 0; i < numberOfPlayers; i++) {
                         //int aleatorio=(int) Math.floor(Math.random()*numberOfPlayers + 1);
-			Player player = new Player(TOKENS[i], board.getStartSquare(0), 0, 0, 0);
+			Player player = new Player(TOKENS[i], board.getStartSquare(0), 0, 0, 0, i);
 			players.add(player);
 		}
 	}
@@ -74,9 +74,24 @@ public class Game {
                         players.get(turno).setRondacarcel(ronda);
                     }
 
-                    if(players.get(turno).getPosicion()==3 ||players.get(turno).getPosicion()==11 || players.get(turno).getPosicion()==17 || players.get(turno).getPosicion()==23){
-                                players.get(turno).money-=100;
-                               this.p_money = p_money+100;
+                    if(players.get(turno).getPosicion()==3){
+                                players.get(turno).money-=200;
+                               this.p_money = p_money+200;
+                              
+                    }
+                    if(players.get(turno).getPosicion()==11){
+                                players.get(turno).money-=400;
+                               this.p_money = p_money+400;
+                              
+                     }
+                    if(players.get(turno).getPosicion()==17){
+                                players.get(turno).money-=600;
+                               this.p_money = p_money+600;
+                              
+                     }
+                    if( players.get(turno).getPosicion()==23){
+                                players.get(turno).money-=800;
+                               this.p_money = p_money+800;
                               
                      }
                     if(players.get(turno).getPosicion()==14){
@@ -84,7 +99,6 @@ public class Game {
                                this.p_money = 0;
                               
                      }
-
 
                     if(players.get(turno).getPosicion()==28){
                         players.get(turno).setPosicion(0);

@@ -1,7 +1,6 @@
 package com.monopoly.domain;
 
 public class Player {
-
 	private String token;
 	protected Square location;
 	protected int money;
@@ -10,13 +9,15 @@ public class Player {
         public int posicion=0;
         public int rondacarcel;
         public boolean carcel=false;
+        public int numPlayer=0;
 	
-	public Player(String token, Square startSquare, int money, int tirada, int posicion) {
+	public Player(String token, Square startSquare, int money, int tirada, int posicion, int num) {
 		this.location = startSquare;
 		this.token = token;
                 this.money = money;
                 this.tirada = tirada;
                 this.posicion = posicion;
+                this.numPlayer = num;
 	}
 	
 	public Square getLocation() {
@@ -66,6 +67,14 @@ public class Player {
 
         public void setCarcel(boolean carcel) {
             this.carcel = carcel;
+        }
+
+        public int getNumPlayer() {
+            return numPlayer;
+        }
+
+        public void setNumPlayer(int numPlayer) {
+            this.numPlayer = numPlayer;
         }
         
         
