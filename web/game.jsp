@@ -24,6 +24,7 @@
                 <c:forEach items="${game.players}" var="player">
                     <p><b>${player.token}</b> ha sacado un ${player.tirada}. Ahora está en <b>${player.location.name}</b> (Posicion: ${player.posicion}) i tiene <b>${player.money} euros</b></p>
                 </c:forEach>
+                    <p>Parquing: <b>${game.p_money}</b></p>    
                 <p><a href="/PBL_Servlets/index.jsp">Reset Game</a></p>
                 
             </div>

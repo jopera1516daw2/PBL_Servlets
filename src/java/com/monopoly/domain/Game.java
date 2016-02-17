@@ -10,7 +10,8 @@ public class Game {
 	public int ronda =1;
         public int turno =0;
         public int numjugadores=0;
-        
+          public int p_money=0;
+          
 	public Game(int numberOfPlayers) {
                 numjugadores=numberOfPlayers;
 		if(numberOfPlayers > TOKENS.length) {
@@ -31,7 +32,9 @@ public class Game {
 	public List<Player> getPlayers() {
 		return players;
 	}
-
+        public int getP_money() {
+                    return p_money;
+                }
         public int getRonda() {
             return ronda;
         }
@@ -72,8 +75,16 @@ public class Game {
                     }
 
                     if(players.get(turno).getPosicion()==3 ||players.get(turno).getPosicion()==11 || players.get(turno).getPosicion()==17 || players.get(turno).getPosicion()==23){
-                        players.get(turno).money-=100;
-                    }
+                                players.get(turno).money-=100;
+                               this.p_money = p_money+100;
+                              
+                     }
+                    if(players.get(turno).getPosicion()==14){
+                                players.get(turno).money+=p_money;
+                               this.p_money = 0;
+                              
+                     }
+
 
                     if(players.get(turno).getPosicion()==28){
                         players.get(turno).setPosicion(0);
