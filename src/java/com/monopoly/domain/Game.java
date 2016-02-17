@@ -8,6 +8,7 @@ public class Game {
 	private List<Player> players = new ArrayList<Player>();
 	private static final String[] TOKENS = {"Ferrari", "Hamburguesa", "Avión", "Zapatilla", "Sombrero"};
 	public int ronda =1;
+        public int turno =0;
         public int numjugadores=0;
         
 	public Game(int numberOfPlayers) {
@@ -38,7 +39,15 @@ public class Game {
         public void setRonda(int ronda) {
             this.ronda = ronda;
         }
+        
+        public int getTurno() {
+            return turno;
+        }
 
+        public void setTurno(int turno) {
+            this.turno = turno;
+        }
+        
         public int getNumjugadores() {
             return numjugadores;
         }
@@ -47,55 +56,53 @@ public class Game {
             this.numjugadores = numjugadores;
         }
 
-	public void playRound(int ronda) {
-                for (int i = 0; i < numjugadores; i++) {
-                    if(ronda==players.get(i).getRondacarcel()+4){
-                        players.get(i).setCarcel(false);
-                    }
+	public void playRound(int ronda, int turno) {
+            
+                if(ronda==players.get(turno).getRondacarcel()+4){
+                    players.get(turno).setCarcel(false);
                 }
-                    for (int i = 0; i < numjugadores; i++) {
-                        if(players.get(i).isCarcel()==false){
-                            players.get(i).setTirada(players.get(i).getDau());
-                            players.get(i).setPosicion(players.get(i).getPosicion()+players.get(i).getTirada());
+                
+                if(players.get(turno).isCarcel()==false){
+                    players.get(turno).setTirada(players.get(turno).getDau());
+                    players.get(turno).setPosicion(players.get(turno).getPosicion()+players.get(turno).getTirada());
 
-                            if(players.get(i).getPosicion()==7){
-                                players.get(i).setCarcel(true);
-                                players.get(i).setRondacarcel(ronda);
-                            }
-                            
-                            if(players.get(i).getPosicion()==3 ||players.get(i).getPosicion()==11 || players.get(i).getPosicion()==17 || players.get(i).getPosicion()==23){
-                                players.get(i).money-=100;
-                            }
-
-                            if(players.get(i).getPosicion()==28){
-                                players.get(i).setPosicion(0);
-                                players.get(i).money+=200;
-                            }
-                            if(players.get(i).getPosicion()==29){
-                                players.get(i).setPosicion(1);
-                                players.get(i).money+=200;
-                            }
-                            if(players.get(i).getPosicion()==30){
-                                players.get(i).setPosicion(2);
-                                players.get(i).money+=200;
-                            }
-                            if(players.get(i).getPosicion()==31){
-                                players.get(i).setPosicion(3);
-                                players.get(i).money+=200;
-                            }
-                            if(players.get(i).getPosicion()==32){
-                                players.get(i).setPosicion(4);
-                                players.get(i).money+=200;
-                            }
-                            if(players.get(i).getPosicion()==33){
-                                players.get(i).setPosicion(5);
-                                players.get(i).money+=200;
-                            }
-
-                            players.get(i).location=board.getStartSquare(players.get(i).getPosicion());
-                        }
+                    if(players.get(turno).getPosicion()==7){
+                        players.get(turno).setCarcel(true);
+                        players.get(turno).setRondacarcel(ronda);
                     }
-                //players.get(0).money+=10;
+
+                    if(players.get(turno).getPosicion()==3 ||players.get(turno).getPosicion()==11 || players.get(turno).getPosicion()==17 || players.get(turno).getPosicion()==23){
+                        players.get(turno).money-=100;
+                    }
+
+                    if(players.get(turno).getPosicion()==28){
+                        players.get(turno).setPosicion(0);
+                        players.get(turno).money+=200;
+                    }
+                    if(players.get(turno).getPosicion()==29){
+                        players.get(turno).setPosicion(1);
+                        players.get(turno).money+=200;
+                    }
+                    if(players.get(turno).getPosicion()==30){
+                        players.get(turno).setPosicion(2);
+                        players.get(turno).money+=200;
+                    }
+                    if(players.get(turno).getPosicion()==31){
+                        players.get(turno).setPosicion(3);
+                        players.get(turno).money+=200;
+                    }
+                    if(players.get(turno).getPosicion()==32){
+                        players.get(turno).setPosicion(4);
+                        players.get(turno).money+=200;
+                    }
+                    if(players.get(turno).getPosicion()==33){
+                        players.get(turno).setPosicion(5);
+                        players.get(turno).money+=200;
+                    }
+
+                    players.get(turno).location=board.getStartSquare(players.get(turno).getPosicion());
+                }
+            
 	}        
         
 }

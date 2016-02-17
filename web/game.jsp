@@ -10,13 +10,13 @@
     </head>
     <body>
         <center>
-            
-         
+          
             <div id="mensaje">
                 <img src="images/Monopoly-logo.jpg" width="200" height="80"/>
                 <br/><br/>
                 <form action="Play">
-                    <input type="submit" value="Play a Round"/>
+                    <input type="submit" value="Tirar"/>
+                    <input type="submit" value="Comprar"/>
                     <input type="hidden" name="newGame" value="false"/>
                 </form>
                 <br/>
