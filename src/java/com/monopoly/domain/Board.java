@@ -38,6 +38,36 @@ public class Board {
 			"Sabadell",
 			"Elche",
 			"Cádiz"};
+        
+        private static final int[] SQUARE_PRICES = 
+		   {0,
+			2000,
+			200,
+			0,
+			250,
+			175,
+			400,
+			0,
+			1500,
+			635,
+			450,
+			0,
+			2200,
+			1300,
+			0,
+			1000,
+			775,
+			0,
+			850,
+			1650,
+			1000,
+			0,
+			1400,
+			0,
+			600,
+			250,
+			600,
+			800};
 	
 	public Board() {
             for (int i = 0; i < 28; i++) {
@@ -67,7 +97,7 @@ public class Board {
                             squares.add(new Square("MULTA4",0));
                             break;
                     default:
-                            squares.add(new Square(SQUARE_NAMES[i],0));
+                            squares.add(new Square(SQUARE_NAMES[i],SQUARE_PRICES[i]));
                             break;
                     }
             }

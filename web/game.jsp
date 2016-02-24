@@ -10,13 +10,13 @@
     </head>
     <body>
         <center>
-          
             <div id="mensaje">
                 <img src="images/Monopoly-logo.jpg" width="200" height="80"/>
                 <br/><br/>
                 <form action="Play">
-                    <input type="submit" value="Tirar"/>
-                    <input type="submit" value="Comprar"/>
+                    <input type="submit" name="tirar" value="Tirar"/>
+                    <input type="submit" name="comprar" value="Comprar"/>
+                    <input type="submit" name="pasar" value="Pasar"/>
                     <input type="hidden" name="newGame" value="false"/>
                 </form>
                 <br/>
@@ -31,8 +31,7 @@
                 </c:forEach>
                     <p>Parquing: <b>${game.p_money}</b></p>    
                 <p><a href="/PBL_Servlets/index.jsp">Reset Game</a></p>
-            </div>
-            
+            </div> 
             <table>
                 <tr>
                     <td>
@@ -42,19 +41,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='START'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -68,19 +67,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Barcelona'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -95,19 +94,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Santander'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -122,19 +121,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='MULTA1'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -149,19 +148,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Albacete'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -176,19 +175,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Melilla'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -203,19 +202,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Vigo'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -230,19 +229,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='CÁRCEL'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -259,19 +258,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Cádiz'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -287,19 +286,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Valencia'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -316,19 +315,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Elche'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -344,19 +343,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Badajoz'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -373,19 +372,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Sabadell'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -401,19 +400,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Pamplona'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -430,19 +429,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Alicante'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -458,19 +457,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='MULTA2'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -487,19 +486,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='MULTA4'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -515,19 +514,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Madrid'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -544,19 +543,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Bilbao'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -572,19 +571,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Gran Canaria'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -601,19 +600,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='VE A LA CÁRCEL'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -627,19 +626,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Mallorca'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -654,19 +653,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Sevilla'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -681,19 +680,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Ceuta'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -708,19 +707,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='MULTA3'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -735,19 +734,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Gijón'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -762,19 +761,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Málaga'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
@@ -789,19 +788,19 @@
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='PARKING'}">
                                         <c:if test="${player.token=='Ferrari'}">
-                                            <font class="ferrari"><b>${player.token}</b></font>
+                                            <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
-                                            <font class="hamburguesa"><b>${player.token}</b></font>
+                                            <img src="images/hamburguesa.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Avión'}">
-                                            <font class="avion"><b>${player.token}</b></font>
+                                            <img src="images/avion.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Zapatilla'}">
-                                            <font class="zapatilla"><b>${player.token}</b></font>
+                                            <img src="images/zapatilla.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Sombrero'}">
-                                            <font class="sombrero"><b>${player.token}</b></font>
+                                            <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>

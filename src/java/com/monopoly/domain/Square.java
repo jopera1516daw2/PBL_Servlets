@@ -3,7 +3,7 @@ package com.monopoly.domain;
 public class Square {
 
 	private String name;
-        private int price;
+        protected int price;
 	
 	public Square(String name, int price) {
 		this.name = name;

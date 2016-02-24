@@ -3,7 +3,7 @@ package com.monopoly.domain;
 public class Player {
 	private String token;
 	protected Square location;
-	protected int money;
+	protected int money = 1000;
         protected int dau;
         public int tirada =0;
         public int posicion=0;

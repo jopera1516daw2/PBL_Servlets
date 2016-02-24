@@ -18,6 +18,8 @@ public class MonopolyServlet extends HttpServlet {
 	private static String PLAY  = "game.jsp";
 	private static String RESET = "index.jsp";
         int numberOfPlayers;
+        boolean podertirar=true;
+        boolean hastirado=false;
         //int ronda=0;
     /**
      * Default constructor. 
@@ -35,8 +37,14 @@ public class MonopolyServlet extends HttpServlet {
 
 	private void execute(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		String forward = PLAY;
+                
+                String forward= PLAY;
 		boolean newGame = Boolean.parseBoolean(request.getParameter("newGame"));
+          
+                String tirar=String.valueOf(request.getParameter("tirar"));
+                String comprar=request.getParameter("comprar");
+                String pasar=request.getParameter("pasar");
+                
 		Game game = (Game)request.getSession().getAttribute("game");
                 
 		
@@ -53,14 +61,33 @@ public class MonopolyServlet extends HttpServlet {
 			request.getSession().setAttribute("game", game);
 		} 
 		else {
-			game.playRound(game.getRonda(), game.getTurno());
+                    if("Tirar".equals(tirar) && podertirar==true){
+                        podertirar=false;
+                        hastirado=true;
+                        game.playRound(game.getRonda(), game.getTurno(), game, numberOfPlayers);
+                    }
+                    if("Comprar".equals(comprar) && hastirado==true){
+                        podertirar=true;
+                        hastirado=false;
+                        game.comprar(game.getRonda(), game.getTurno());
                         if(game.getTurno()==(numberOfPlayers-1)){
                             game.setTurno(0);
                             game.setRonda(game.getRonda()+1);
                         }else{
                             game.setTurno(game.getTurno()+1);
-                        }
-                 
+                        }                        
+                    }
+                    
+                    if("Pasar".equals(pasar) && hastirado==true){
+                        podertirar=true;
+                        hastirado=false;
+                        if(game.getTurno()==(numberOfPlayers-1)){
+                            game.setTurno(0);
+                            game.setRonda(game.getRonda()+1);
+                        }else{
+                            game.setTurno(game.getTurno()+1);
+                        }                        
+                    }
 		}
 		
 		request.getRequestDispatcher(forward).forward(request, response);

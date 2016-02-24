@@ -26,6 +26,10 @@ input[type="submit"]:hover {
     border: 1px solid #f00;
     background: #eef;
 }
+.flex{
+    margin-left:120px;
+    display: flex;
+}
 
 #mensaje{
     margin-left: 455px;
