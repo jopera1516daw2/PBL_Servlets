@@ -73,31 +73,31 @@ public class Board {
             for (int i = 0; i < 28; i++) {
                     switch (i) {
                     case 0:
-                            squares.add(new Square("START",0));
+                            squares.add(new Square("START",0, false));
                             break;
                     case 3:
-                            squares.add(new Square("MULTA1",0));
+                            squares.add(new Square("MULTA1",0, false));
                             break;
                     case 7:
-                            squares.add(new Square("CÁRCEL",0));
+                            squares.add(new Square("CÁRCEL",0, false));
                             break;
                     case 11:
-                            squares.add(new Square("MULTA2",0));
+                            squares.add(new Square("MULTA2",0, false));
                             break;
                     case 14:
-                            squares.add(new Square("PARKING",0));
+                            squares.add(new Square("PARKING",0, false));
                             break;
                     case 17:
-                            squares.add(new Square("MULTA3",0));
+                            squares.add(new Square("MULTA3",0, false));
                             break;
                     case 21:
-                            squares.add(new Square("START",0));
+                            squares.add(new Square("START",0, false));
                             break;
                     case 23:
-                            squares.add(new Square("MULTA4",0));
+                            squares.add(new Square("MULTA4",0, false));
                             break;
                     default:
-                            squares.add(new Square(SQUARE_NAMES[i],SQUARE_PRICES[i]));
+                            squares.add(new Square(SQUARE_NAMES[i],SQUARE_PRICES[i], false));
                             break;
                     }
             }

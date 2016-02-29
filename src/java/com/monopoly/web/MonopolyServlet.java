@@ -18,8 +18,8 @@ public class MonopolyServlet extends HttpServlet {
 	private static String PLAY  = "game.jsp";
 	private static String RESET = "index.jsp";
         int numberOfPlayers;
-        boolean podertirar=true;
-        boolean hastirado=false;
+        //boolean podertirar=true;
+        //boolean hastirado=false;
         //int ronda=0;
     /**
      * Default constructor. 
@@ -61,14 +61,14 @@ public class MonopolyServlet extends HttpServlet {
 			request.getSession().setAttribute("game", game);
 		} 
 		else {
-                    if("Tirar".equals(tirar) && podertirar==true){
-                        podertirar=false;
-                        hastirado=true;
+                    if("Tirar".equals(tirar) && game.isPodertirar()==true){
+                        game.setPodertirar(false);
+                        game.setHastirado(true);
                         game.playRound(game.getRonda(), game.getTurno(), game, numberOfPlayers);
                     }
-                    if("Comprar".equals(comprar) && hastirado==true){
-                        podertirar=true;
-                        hastirado=false;
+                    if("Comprar".equals(comprar) && game.isHastirado()==true){
+                        game.setPodertirar(true);
+                        game.setHastirado(false);
                         game.comprar(game.getRonda(), game.getTurno());
                         if(game.getTurno()==(numberOfPlayers-1)){
                             game.setTurno(0);
@@ -78,9 +78,9 @@ public class MonopolyServlet extends HttpServlet {
                         }                        
                     }
                     
-                    if("Pasar".equals(pasar) && hastirado==true){
-                        podertirar=true;
-                        hastirado=false;
+                    if("Pasar".equals(pasar) && game.isHastirado()==true){
+                        game.setPodertirar(true);
+                        game.setHastirado(false);
                         if(game.getTurno()==(numberOfPlayers-1)){
                             game.setTurno(0);
                             game.setRonda(game.getRonda()+1);
