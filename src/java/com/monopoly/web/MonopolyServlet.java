@@ -9,28 +9,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.monopoly.domain.Game;
 
-/**
- * Servlet implementation class MonopolyServlet
- */
+
 @WebServlet({ "/MonopolyServlet", "/Monopoly", "/Play" })
 public class MonopolyServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static String PLAY  = "game.jsp";
 	private static String RESET = "index.jsp";
         int numberOfPlayers;
-        //boolean podertirar=true;
-        //boolean hastirado=false;
-        //int ronda=0;
     /**
      * Default constructor. 
      */
     public MonopolyServlet() {
-        // TODO Auto-generated constructor stub user.properties.file=/home/dgs/.netbeans/8.1/build.properties
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		execute(request, response);
 	}
@@ -47,9 +38,7 @@ public class MonopolyServlet extends HttpServlet {
                 
 		Game game = (Game)request.getSession().getAttribute("game");
                 
-		
 		if(newGame) {
-                        //game.ronda=0;
                         numberOfPlayers = Integer.parseInt(request.getParameter("numberOfPlayers"));
 			try {
 				game = new Game(numberOfPlayers);
@@ -89,14 +78,9 @@ public class MonopolyServlet extends HttpServlet {
                         }                        
                     }
 		}
-		
 		request.getRequestDispatcher(forward).forward(request, response);
-		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		execute(request, response);
 	}

@@ -12,8 +12,8 @@
             <img src="images/Monopoly-logo.jpg" width="500" height="190"/>
             </br>
             <form action="Play">
-                How many players? <input type="text" name="numberOfPlayers" size="1"/>
-                <input type="submit" value="Play!"/>
+                Numero de jugadores: <input type="text" name="numberOfPlayers" size="1"/>
+                <input type="submit" value="¡Jugar!"/>
                 <input type="hidden" name="newGame" value="true"/>
             </form>
             <p class="error">${message}</p>

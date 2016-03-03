@@ -30,7 +30,7 @@
                     </c:if>    
                 </c:forEach>
                     <p>Parquing: <b>${game.p_money}</b></p>    
-                <p><a href="/PBL_Servlets/index.jsp">Reset Game</a></p>
+                <p><a href="/PBL_Servlets/index.jsp">Reiniciar Juego</a></p>
             </div> 
             <table>
                 <tr>
@@ -108,6 +108,11 @@
                                         <c:if test="${player.token=='Sombrero'}">
                                             <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
+                                        <%--<c:forEach items="${player.comprados}" var="comprado">--%>
+                                            <%--<c:if test="${comprado.name=='Santander'}">--%>
+                                                
+                                            <%--</c:if>--%>
+                                        <%--</c:forEach>--%>
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
