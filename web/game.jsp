@@ -32,6 +32,30 @@
                     <p>Parquing: <b>${game.p_money}</b></p>    
                 <p><a href="/PBL_Servlets/index.jsp">Reiniciar Juego</a></p>
             </div> 
+             <div style="text-align: center; position:absolute; float:right;">
+                <c:forEach items="${game.players}" var="player">
+                    <c:if test="${player.token=='Coche'}">
+                        <img src="images/coche.png" width="20" height="20"/><br>
+                    </c:if>
+                    <c:if test="${player.token=='Hamburguesa'}">
+                        <img src="images/hamburguesa.png" width="20" height="20"/><br>
+                    </c:if>
+                    <c:if test="${player.token=='Avión'}">
+                        <img src="images/avion.png" width="20" height="20"/><br>
+                    </c:if>
+                    <c:if test="${player.token=='Zapatilla'}">
+                        <img src="images/zapatilla.png" width="20" height="20"/><br>
+                    </c:if>
+                    <c:if test="${player.token=='Sombrero'}">
+                        <img src="images/sombrero.png" width="20" height="20"/><br>
+                    </c:if>    
+                    
+                    <c:forEach items="${player.comprados}" var="comprado">
+                    <font style="font-size: 12px;">${comprado.name} - ${comprado.price} $</font><br>
+                    </c:forEach>
+                    <br>
+                </c:forEach>
+            </div>
             <table>
                 <tr>
                     <td>
@@ -40,7 +64,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='START'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -59,6 +83,7 @@
                                 </c:forEach>
                             </div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>+ 800 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -66,7 +91,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Barcelona'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -84,8 +109,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>2000 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>2000 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -93,7 +118,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Santander'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -116,8 +141,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>200 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>200 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -125,7 +150,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='MULTA1'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -143,8 +168,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>- 200 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>- 200 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -152,7 +177,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Albacete'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -170,8 +195,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>250 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>250 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -179,7 +204,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Melilla'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -197,8 +222,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>175 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>175 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -206,7 +231,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Vigo'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -224,8 +249,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>400 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>400 $</b></footer>
                     </td>
                    <td>
                         <div class="box">
@@ -233,7 +258,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='CÁRCEL'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -251,9 +276,9 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda" style="margin-top: 55px"><b>Tres turnos sin tirar</b></div>
                         </div>
-                    </td>
+                       <footer class="footercelda" style="position:absolute; margin-left: 20px;"><b>3 turnos</b></footer>
+                    </td>                
                 </tr>
                 <tr>
                     <td>
@@ -262,7 +287,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Cádiz'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -280,8 +305,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>800 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>800 $</b></footer>
                     </td>
                     <td></td><td></td><td></td><td></td><td></td><td></td>
                     <td>
@@ -290,7 +315,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Valencia'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -308,8 +333,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>1500 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>1500 $</b></footer>
                     </td>
                 </tr>
                 <tr>
@@ -319,7 +344,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Elche'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -335,10 +360,10 @@
                                             <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
-                                </c:forEach>
-                                <div class="footercelda"><b>600 $</b></div>            
+                                </c:forEach>          
                             </div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>600 $</b></footer>
                     </td>
                     <td></td><td></td><td></td><td></td><td></td><td></td>
                     <td>
@@ -347,7 +372,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Badajoz'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -365,8 +390,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>635 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>635 $</b></footer>
                     </td>
                 </tr>
                 <tr>
@@ -376,7 +401,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Sabadell'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -392,10 +417,10 @@
                                             <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
-                                </c:forEach>
-                                <div class="footercelda"><b>250 $</b></div>            
+                                </c:forEach>         
                             </div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>250 $</b></footer>
                     </td>
                     <td></td><td></td><td></td><td></td><td></td><td></td>
                     <td>
@@ -404,7 +429,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Pamplona'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -420,10 +445,10 @@
                                             <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
-                                </c:forEach>
-                                <div class="footercelda"><b>450 $</b></div>            
+                                </c:forEach>          
                             </div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>450 $</b></footer>
                     </td>
                 </tr>
                 <tr>
@@ -433,7 +458,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Alicante'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -451,8 +476,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>600 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>600 $</b></footer>
                     </td>
                     <td></td><td></td><td></td><td></td><td></td><td></td>
                     <td>
@@ -461,7 +486,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='MULTA2'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -477,10 +502,10 @@
                                             <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
-                                </c:forEach>
-                                <div class="footercelda"><b>- 400 $</b></div>            
+                                </c:forEach>          
                             </div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>- 400 $</b></footer>
                     </td>
                 </tr>
                 <tr>
@@ -490,7 +515,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='MULTA4'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -507,9 +532,9 @@
                                         </c:if>
                                     </c:if>                                    
                                 </c:forEach>
-                            </div>
-                            <div class="footercelda"><b>- 800 $</b></div>  
+                            </div>  
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>- 800 $</b></footer>
                     </td>
                     <td></td><td></td><td></td><td></td><td></td><td></td>
                     <td>
@@ -518,7 +543,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Madrid'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -536,8 +561,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>2200 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>2200 $</b></footer>
                     </td>
                 </tr>
                 <tr>
@@ -547,7 +572,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Bilbao'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -563,10 +588,10 @@
                                             <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
-                                </c:forEach>
-                                <div class="footercelda"><b>1400 $</b></div>            
+                                </c:forEach>           
                             </div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>1400 $</b></footer>
                     </td>
                     <td></td><td></td><td></td><td></td><td></td><td></td>
                     <td>
@@ -575,7 +600,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Gran Canaria'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -591,10 +616,10 @@
                                             <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
-                                </c:forEach>
-                                <div class="footercelda"><b>1300 $</b></div>            
+                                </c:forEach>           
                             </div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>1300 $</b></footer>
                     </td>
                 </tr>
                  <tr>
@@ -604,7 +629,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='VE A LA CÁRCEL'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -630,7 +655,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Mallorca'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -646,10 +671,10 @@
                                             <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
-                                </c:forEach>
-                                <div class="footercelda"><b>1000 $</b></div>            
+                                </c:forEach>           
                             </div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>1000 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -657,7 +682,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Sevilla'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -673,10 +698,10 @@
                                             <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
-                                </c:forEach>
-                                <div class="footercelda"><b>1650 $</b></div>            
+                                </c:forEach>           
                             </div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>1650 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -684,7 +709,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Ceuta'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -700,10 +725,10 @@
                                             <img src="images/sombrero.png" width="20" height="20"/>
                                         </c:if>
                                     </c:if>                                    
-                                </c:forEach>
-                                <div class="footercelda"><b>850 $</b></div>            
+                                </c:forEach>          
                             </div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>850 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -711,7 +736,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='MULTA3'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -729,8 +754,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>- 600 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>- 600 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -738,7 +763,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Gijón'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -756,8 +781,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>775 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>775 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -765,7 +790,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='Málaga'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -783,8 +808,8 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda"><b>1000 $</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>1000 $</b></footer>
                     </td>
                     <td>
                         <div class="box">
@@ -792,7 +817,7 @@
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
                                     <c:if test="${player.location.name=='PARKING'}">
-                                        <c:if test="${player.token=='Ferrari'}">
+                                        <c:if test="${player.token=='Coche'}">
                                             <img src="images/coche.png" width="20" height="20"/>
                                         </c:if>
                                         <c:if test="${player.token=='Hamburguesa'}">
@@ -810,12 +835,11 @@
                                     </c:if>                                    
                                 </c:forEach>
                             </div>
-                            <div class="footercelda" style="margin-top: 55px"><b>Recoge todo el dinero</b></div>
                         </div>
+                        <footer class="footercelda" style="position:absolute; margin-left: 0px;"><b>+ todo el dinero</b></footer>
                     </td>
                 </tr>
             </table>
-            
         </center>
     </body>
 </html>

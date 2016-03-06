@@ -14,6 +14,7 @@ public class Player {
         public int rondacarcel;
         public boolean carcel=false;
         public int numPlayer=0;
+        public boolean muerto=false;
 	
 	public Player(String token, Square startSquare, int money, int tirada, int posicion, int num) {
 		this.location = startSquare;
@@ -79,6 +80,14 @@ public class Player {
 
         public void setNumPlayer(int numPlayer) {
             this.numPlayer = numPlayer;
+        }
+
+        public boolean isMuerto() {
+            return muerto;
+        }
+
+        public void setMuerto(boolean muerto) {
+            this.muerto = muerto;
         }
         
         public List<Square> getComprados() {

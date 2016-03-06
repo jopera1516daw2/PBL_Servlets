@@ -58,7 +58,7 @@ public class MonopolyServlet extends HttpServlet {
                     if("Comprar".equals(comprar) && game.isHastirado()==true){
                         game.setPodertirar(true);
                         game.setHastirado(false);
-                        game.comprar(game.getRonda(), game.getTurno());
+                        game.comprar(game.getRonda(), game.getTurno(), game);
                         if(game.getTurno()==(numberOfPlayers-1)){
                             game.setTurno(0);
                             game.setRonda(game.getRonda()+1);
