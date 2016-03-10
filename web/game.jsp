@@ -613,7 +613,9 @@
                     </td>
                     <td></td><td></td>
                     <td colspan="2">
-                        <p style="margin-left: 25px; font-size: 15px;"><a href="/PBL_Servlets/index.jsp">Reiniciar Juego</a></p>
+                        <div style="display:flex">
+                            <a style="margin: 0 auto; cursor:pointer;" href="/PBL_Servlets/index.jsp"><input type="button" style="font-size: 15px; cursor:pointer;" value="Reiniciar Juego"</a>
+                        </div>
                     </td><td></td><td></td>
                     <td>
                         <div class="box">
