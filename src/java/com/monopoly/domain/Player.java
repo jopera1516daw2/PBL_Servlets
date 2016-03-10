@@ -6,7 +6,7 @@ import java.util.List;
 public class Player {
 	private String token;
 	protected Square location;
-	protected int money = 1000;
+	protected int money = 5000;
         protected List<Square> comprados = new ArrayList<Square>();
         protected int dau;
         public int tirada =0;

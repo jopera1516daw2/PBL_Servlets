@@ -9,6 +9,7 @@
     </head>
     <body>
         <center>
+            <a href="../src/java/com/monopoly/domain/Board.java"></a>
             <img src="images/Monopoly-logo.jpg" width="500" height="190"/>
             </br>
             <form action="Play">

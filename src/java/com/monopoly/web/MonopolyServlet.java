@@ -16,6 +16,7 @@ public class MonopolyServlet extends HttpServlet {
 	private static String PLAY  = "game.jsp";
 	private static String RESET = "index.jsp";
         int numberOfPlayers;
+        //public List<Player> players2 = new ArrayList<Player>();
     /**
      * Default constructor. 
      */
@@ -49,34 +50,40 @@ public class MonopolyServlet extends HttpServlet {
 			
 			request.getSession().setAttribute("game", game);
 		} 
-		else {
-                    if("Tirar".equals(tirar) && game.isPodertirar()==true){
-                        game.setPodertirar(false);
-                        game.setHastirado(true);
-                        game.playRound(game.getRonda(), game.getTurno(), game, numberOfPlayers);
-                    }
-                    if("Comprar".equals(comprar) && game.isHastirado()==true){
-                        game.setPodertirar(true);
-                        game.setHastirado(false);
-                        game.comprar(game.getRonda(), game.getTurno(), game);
-                        if(game.getTurno()==(numberOfPlayers-1)){
-                            game.setTurno(0);
-                            game.setRonda(game.getRonda()+1);
-                        }else{
-                            game.setTurno(game.getTurno()+1);
-                        }                        
-                    }
-                    
-                    if("Pasar".equals(pasar) && game.isHastirado()==true){
-                        game.setPodertirar(true);
-                        game.setHastirado(false);
-                        if(game.getTurno()==(numberOfPlayers-1)){
-                            game.setTurno(0);
-                            game.setRonda(game.getRonda()+1);
-                        }else{
-                            game.setTurno(game.getTurno()+1);
-                        }                        
-                    }
+		else{
+                    /*players2=game.getPlayers();
+                    if(players2.get(game.getTurno()).isMuerto()==true){
+                        game.setTurno(game.getTurno()+1);
+                        
+                    }else{*/
+                        if("Tirar".equals(tirar) && game.isPodertirar()==true){
+                            game.setPodertirar(false);
+                            game.setHastirado(true);
+                            game.playRound(game.getRonda(), game.getTurno(), game, numberOfPlayers);
+                        }
+                        if("Comprar".equals(comprar) && game.isHastirado()==true){
+                            game.setPodertirar(true);
+                            game.setHastirado(false);
+                            game.comprar(game.getRonda(), game.getTurno(), game);
+                            if(game.getTurno()==(numberOfPlayers-1)){
+                                game.setTurno(0);
+                                game.setRonda(game.getRonda()+1);
+                            }else{
+                                game.setTurno(game.getTurno()+1);
+                            }                        
+                        }
+
+                        if("Pasar".equals(pasar) && game.isHastirado()==true){
+                            game.setPodertirar(true);
+                            game.setHastirado(false);
+                            if(game.getTurno()==(numberOfPlayers-1)){
+                                game.setTurno(0);
+                                game.setRonda(game.getRonda()+1);
+                            }else{
+                                game.setTurno(game.getTurno()+1);
+                            }                        
+                        }
+                    //}
 		}
 		request.getRequestDispatcher(forward).forward(request, response);
 	}

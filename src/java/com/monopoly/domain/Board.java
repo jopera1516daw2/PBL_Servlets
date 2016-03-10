@@ -4,109 +4,104 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Board {
-    private List<Square> squares = new ArrayList<Square>();
+    private List<Square> Squares = new ArrayList<Square>();
 
-    private static final String[] SQUARE_NAMES = 
-    {"START",
-         "Barcelona",
-         "Santander",
-         "MULTA1",
-         "Albacete",
-         "Melilla",
-         "Vigo",
-         "CÁRCEL",
-         "Valencia",
-         "Badajoz",
-         "Pamplona",
-         "MULTA2",
-         "Madrid",
-         "Gran Canaria",
-         "PARKING",
-         "Málaga",
-         "Gijón",
-         "MULTA3",
-         "Ceuta",
-         "Sevilla",
-         "Mallorca",
-         "VE A LA CÁRCEL",
-         "Bilbao",
-         "MULTA4",
-         "Alicante",
-         "Sabadell",
-         "Elche",
-         "Cádiz"
-    };
-
-    private static final int[] SQUARE_PRICES = 
-    {0,
-         2000,
-         200,
-         0,
-         250,
-         175,
-         400,
-         0,
-         1500,
-         635,
-         450,
-         0,
-         2200,
-         1300,
-         0,
-         1000,
-         775,
-         0,
-         850,
-         1650,
-         1000,
-         0,
-         1400,
-         0,
-         600,
-         250,
-         600,
-         800
-    };
-
-    public Board() {
+    public Board() {   
         for (int i = 0; i < 28; i++) {
             switch (i) {
             case 0:
-                    squares.add(new Square("START",0, false));
+                    Squares.add(new Square("START",0, false));
+                    break;
+            case 1: 
+                    Squares.add(new Square("Sabadell",175, false));
+                    break;
+            case 2: 
+                    Squares.add(new Square("Santander",200, false));
                     break;
             case 3:
-                    squares.add(new Square("MULTA1",0, false));
+                    Squares.add(new Square("MULTA1",0, false));
+                    break;
+            case 4: 
+                    Squares.add(new Square("Albacete",250, false));
+                    break;
+            case 5: 
+                    Squares.add(new Square("Melilla",325, false));
+                    break;
+            case 6: 
+                    Squares.add(new Square("Vigo",400, false));
                     break;
             case 7:
-                    squares.add(new Square("CÁRCEL",0, false));
+                    Squares.add(new Square("CÁRCEL",0, false));
+                    break;
+            case 8: 
+                    Squares.add(new Square("Pamplona",450, false));
+                    break;
+            case 9: 
+                    Squares.add(new Square("Alicante",600, false));
+                    break;
+            case 10: 
+                    Squares.add(new Square("Elche",635, false));
                     break;
             case 11:
-                    squares.add(new Square("MULTA2",0, false));
+                    Squares.add(new Square("MULTA2",0, false));
+                    break;
+            case 12: 
+                    Squares.add(new Square("Badajoz",700, false));
+                    break;
+            case 13: 
+                    Squares.add(new Square("Cádiz",800, false));
                     break;
             case 14:
-                    squares.add(new Square("PARKING",0, false));
+                    Squares.add(new Square("PARKING",0, false));
+                    break;
+            case 15: 
+                    Squares.add(new Square("Ceuta",925, false));
+                    break;
+            case 16: 
+                    Squares.add(new Square("Gijón",1000, false));
                     break;
             case 17:
-                    squares.add(new Square("MULTA3",0, false));
+                    Squares.add(new Square("SUERTE",0, false));
+                    break;
+            case 18: 
+                    Squares.add(new Square("Mallorca",1125, false));
+                    break;
+            case 19: 
+                    Squares.add(new Square("Málaga",1300, false));
+                    break;
+            case 20: 
+                    Squares.add(new Square("Gran Canaria",1350, false));
                     break;
             case 21:
-                    squares.add(new Square("START",0, false));
+                    Squares.add(new Square("VE A LA CÁRCEL",0, false));
+                    break;
+            case 22: 
+                    Squares.add(new Square("Bilbao",1400, false));
                     break;
             case 23:
-                    squares.add(new Square("MULTA4",0, false));
+                    Squares.add(new Square("MULTA4",0, false));
                     break;
-            default:
-                    squares.add(new Square(SQUARE_NAMES[i],SQUARE_PRICES[i], false));
+            case 24: 
+                    Squares.add(new Square("Valencia",1500, false));
+                    break;
+            case 25: 
+                    Squares.add(new Square("Sevilla",1650, false));
+                    break;
+            case 26: 
+                    Squares.add(new Square("Barcelona",2000, false));
+                    break;
+            case 27: 
+                    Squares.add(new Square("Madrid",2200, false));
                     break;
             }
         }
     }
 
     public List<Square> getSquares() {
-        return squares;
+        return Squares;
     }
 
     public Square getStartSquare(int i) {
-        return squares.get(i);
+        return Squares.get(i);
     }
 }
