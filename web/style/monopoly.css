@@ -2,19 +2,19 @@
 
 body
 {
-	background-color:#b0c4de;
-	font-family: sans-serif;
+    background: linear-gradient(to right, rgba(76,255,189,1) 0%, rgba(204,252,47,0.7) 57%, rgba(204,252,47,0.48) 100%);
+    font-family: sans-serif;
 }
 .error
 {
-	font-size: small;
-	color: red;
+    font-size: small;
+    color: red;
 }
 
 input[type="text"]
 {
-	border-style: solid;
-	border-width: 1px;
+    border-style: solid;
+    border-width: 1px;
 }
 
 input[type="submit"]
@@ -32,9 +32,7 @@ input[type="submit"]:hover {
 }
 
 #mensaje{
-    margin-left: 30px;
     text-align: center;
-    position:absolute;
     font-size: 11px;
     
 }

@@ -12,10 +12,10 @@ import com.monopoly.domain.Game;
 
 @WebServlet({ "/MonopolyServlet", "/Monopoly", "/Play" })
 public class MonopolyServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	//private static final long serialVersionUID = 1L;
 	private static String PLAY  = "game.jsp";
 	private static String RESET = "index.jsp";
-        int numberOfPlayers;
+        int numeroJugadores;
         //public List<Player> players2 = new ArrayList<Player>();
     /**
      * Default constructor. 
@@ -40,9 +40,9 @@ public class MonopolyServlet extends HttpServlet {
 		Game game = (Game)request.getSession().getAttribute("game");
                 
 		if(newGame) {
-                        numberOfPlayers = Integer.parseInt(request.getParameter("numberOfPlayers"));
+                        numeroJugadores = Integer.parseInt(request.getParameter("numeroJugadores"));
 			try {
-				game = new Game(numberOfPlayers);
+				game = new Game(numeroJugadores);
 			} catch (IllegalArgumentException e) {
 				request.setAttribute("message", e.getMessage());
 				forward = RESET;			
@@ -59,13 +59,13 @@ public class MonopolyServlet extends HttpServlet {
                         if("Tirar".equals(tirar) && game.isPodertirar()==true){
                             game.setPodertirar(false);
                             game.setHastirado(true);
-                            game.playRound(game.getRonda(), game.getTurno(), game, numberOfPlayers);
+                            game.playRound(game.getRonda(), game.getTurno(), game, numeroJugadores);
                         }
                         if("Comprar".equals(comprar) && game.isHastirado()==true){
                             game.setPodertirar(true);
                             game.setHastirado(false);
                             game.comprar(game.getRonda(), game.getTurno(), game);
-                            if(game.getTurno()==(numberOfPlayers-1)){
+                            if(game.getTurno()==(numeroJugadores-1)){
                                 game.setTurno(0);
                                 game.setRonda(game.getRonda()+1);
                             }else{
@@ -76,7 +76,7 @@ public class MonopolyServlet extends HttpServlet {
                         if("Pasar".equals(pasar) && game.isHastirado()==true){
                             game.setPodertirar(true);
                             game.setHastirado(false);
-                            if(game.getTurno()==(numberOfPlayers-1)){
+                            if(game.getTurno()==(numeroJugadores-1)){
                                 game.setTurno(0);
                                 game.setRonda(game.getRonda()+1);
                             }else{

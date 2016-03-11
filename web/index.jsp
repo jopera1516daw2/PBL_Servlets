@@ -9,11 +9,11 @@
     </head>
     <body>
         <center>
-            <a href="../src/java/com/monopoly/domain/Board.java"></a>
+            <a href="../src/java/com/monopoly/domain/Tablero.java"></a>
             <img src="images/Monopoly-logo.jpg" width="500" height="190"/>
             </br>
             <form action="Play">
-                Numero de jugadores: <input type="text" name="numberOfPlayers" size="1"/>
+                Numero de jugadores: <input type="text" name="numeroJugadores" size="1"/>
                 <input type="submit" value="¡Jugar!"/>
                 <input type="hidden" name="newGame" value="true"/>
             </form>

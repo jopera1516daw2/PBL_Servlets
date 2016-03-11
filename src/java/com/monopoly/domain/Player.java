@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Player {
 	private String token;
-	protected Square location;
+	protected Casilla location;
 	protected int money = 5000;
-        protected List<Square> comprados = new ArrayList<Square>();
+        protected List<Casilla> comprados = new ArrayList<Casilla>();
         protected int dau;
         public int tirada =0;
         public int posicion=0;
@@ -16,8 +16,8 @@ public class Player {
         public int numPlayer=0;
         public boolean muerto=false;
 	
-	public Player(String token, Square startSquare, int money, int tirada, int posicion, int num) {
-		this.location = startSquare;
+	public Player(String token, Casilla startCasilla, int money, int tirada, int posicion, int num) {
+		this.location = startCasilla;
 		this.token = token;
                 this.money = money;
                 this.tirada = tirada;
@@ -25,7 +25,7 @@ public class Player {
                 this.numPlayer = num;
 	}
 	
-	public Square getLocation() {
+	public Casilla getLocation() {
 		return location;
 	}
 	
@@ -90,7 +90,7 @@ public class Player {
             this.muerto = muerto;
         }
         
-        public List<Square> getComprados() {
+        public List<Casilla> getComprados() {
 		return comprados;
 	}
         

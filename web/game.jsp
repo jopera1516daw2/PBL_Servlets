@@ -9,8 +9,8 @@
         <link rel="stylesheet" type="text/css" href="style/monopoly.css">
     </head>
     <body>
-         <div id="contenidor" style="display:flex;">
-             <div style="text-align: center; position:absolute; float:right; margin:0 auto;">
+         <div id="contenidor" style="display:flex; flex-direction: row;">
+             <div style="text-align: center; width: 15%">
                  <p>Lista de compras</p><hr>
                 <c:forEach items="${game.players}" var="player">
                     <c:if test="${player.token=='Coche'}">
@@ -35,7 +35,7 @@
                     <br><hr>
                 </c:forEach>
             </div>
-            <table style="margin:0 auto;">
+            <table style="margin:0 10%">
                 <tr>
                     <td>
                         <div class="box">
@@ -227,7 +227,7 @@
                         <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>400 $</b></footer>
                     </td>
                    <td>
-                        <div class="box">
+                        <div class="box" style="background-image: url('images/carcel.png'); background-size: 70px 70px; background-repeat: no-repeat; background-position: center;">
                             <div class="titulocelda" style="color:red;"><b>CÁRCEL</b></div>
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
@@ -282,28 +282,30 @@
                         </div>
                         <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>2200 $</b></footer>
                     </td>
-                    <td colspan="6">
-                        <div id="mensaje">
-                            <img src="images/Monopoly-logo.jpg" width="200" height="80"/>
-                            <br/><br/>
-                            <form action="Play">
-                                <input type="submit" name="tirar" value="Tirar"/>
-                                <input type="submit" name="comprar" value="Comprar"/>
-                                <input type="submit" name="pasar" value="Pasar"/>
-                                <input type="hidden" name="newGame" value="false"/>
-                            </form>
-                            <br/>
-                            <p>Ronda: <b>${game.ronda}</b></p>
-                            <c:forEach items="${game.players}" var="player">
-                                <c:if test="${game.turno==player.numPlayer}">
-                                    <p style="color:red;"><b>${player.token}</b> ha sacado un ${player.tirada}. Ahora está en <b>${player.location.name}</b> (Posicion: ${player.posicion}) i tiene <b>${player.money} euros</b></p>
-                                </c:if>
-                                <c:if test="${game.turno!=player.numPlayer}">
-                                    <p><b>${player.token}</b> ha sacado un ${player.tirada}. Ahora está en <b>${player.location.name}</b> (Posicion: ${player.posicion}) i tiene <b>${player.money} euros</b></p>
-                                </c:if>    
-                            </c:forEach>
-                                <p>Parquing: <b>${game.p_money}</b></p>    
-                        </div> 
+                    <td colspan="6" rowspan="4">
+                        <div style="display: flex;">
+                            <div id="mensaje" style="margin: 0 auto">
+                                <img src="images/Monopoly-logo.jpg" width="200" height="80"/>
+                                <br/><br/>
+                                <form action="Play">
+                                    <input type="submit" name="tirar" value="Tirar"/>
+                                    <input type="submit" name="comprar" value="Comprar"/>
+                                    <input type="submit" name="pasar" value="Pasar"/>
+                                    <input type="hidden" name="newGame" value="false"/>
+                                </form>
+                                <br/>
+                                <p>Ronda: <b>${game.ronda}</b></p>
+                                <c:forEach items="${game.players}" var="player">
+                                    <c:if test="${game.turno==player.numPlayer}">
+                                        <p style="color:red;"><b>${player.token}</b> ha sacado un ${player.tirada}. Ahora está en <b>${player.location.name}</b> (Posicion: ${player.posicion}) i tiene <b>${player.money} euros</b></p>
+                                    </c:if>
+                                    <c:if test="${game.turno!=player.numPlayer}">
+                                        <p><b>${player.token}</b> ha sacado un ${player.tirada}. Ahora está en <b>${player.location.name}</b> (Posicion: ${player.posicion}) i tiene <b>${player.money} euros</b></p>
+                                    </c:if>    
+                                </c:forEach>
+                                    <p>Parquing: <b>${game.p_money}</b></p>    
+                            </div> 
+                        </div>   
                     </td>
                     <td>
                         <div class="box">
@@ -361,7 +363,6 @@
                         </div>
                         <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>2000 $</b></footer>
                     </td>
-                    <td></td><td></td><td></td><td></td><td></td><td></td>
                     <td>
                         <div class="box">
                             <div class="titulocelda" style="background-color:#3ADF00;"><b>Alicante</b></div>
@@ -418,7 +419,7 @@
                         </div>
                         <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>1650 $</b></footer>
                     </td>
-                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                    
                     <td>
                         <div class="box">
                             <div class="titulocelda" style="background-color:#3ADF00;"><b>Elche</b></div>
@@ -475,7 +476,7 @@
                         </div>
                         <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>1500 $</b></footer>
                     </td>
-                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                    
                     <td>
                         <div class="box">
                             <div class="titulocelda" style="color:red;"><b>MULTA</b></div>
@@ -647,7 +648,7 @@
                 </tr>
                  <tr>
                     <td>
-                        <div class="box">
+                        <div class="box" style="background-image: url('images/ircarcel.png'); background-size: 40px 40px; background-repeat: no-repeat; background-position: center;">
                             <div class="titulocelda" style="color:red;"><b>VE A LA CÁRCEL</b></div>
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">
@@ -754,7 +755,7 @@
                         <footer class="footercelda" style="position:absolute; margin-left: 25px;"><b>1125 $</b></footer>
                     </td>
                     <td>
-                        <div class="box">
+                        <div class="box" style="background-image: url('images/int.png'); background-size: 20px 40px; background-repeat: no-repeat; background-position: center; ">
                             <div class="titulocelda" style="color:green;"><b>SUERTE</b></div>
                             <div id="pos">
                                 <c:forEach items="${game.players}" var="player">

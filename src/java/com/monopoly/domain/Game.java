@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
-    private Board board = new Board();
+    private Tablero Tablero = new Tablero();
     protected List<Player> players = new ArrayList<Player>();
     private static final String[] TOKENS = {"Coche", "Hamburguesa", "Avión", "Zapatilla", "Sombrero"};
     public int ronda =1;
@@ -22,13 +22,13 @@ public class Game {
             }
             for (int i = 0; i < numberOfPlayers; i++) {
                     //int aleatorio=(int) Math.floor(Math.random()*numberOfPlayers + 1);
-                    Player player = new Player(TOKENS[i], board.getStartSquare(0), 5000, 0, 0, i);
+                    Player player = new Player(TOKENS[i], Tablero.getStartCasilla(0), 5000, 0, 0, i);
                     players.add(player);
             }
     }
 
-    public List<Square> getSquares() {
-        return board.getSquares();
+    public List<Casilla> getCasillas() {
+        return Tablero.getCasillas();
     }
 
     public List<Player> getPlayers() {
@@ -201,7 +201,7 @@ public class Game {
                     players.get(turno).money+=800;
                 }*/
 
-                players.get(turno).location=board.getStartSquare(players.get(turno).getPosicion());
+                players.get(turno).location=Tablero.getStartCasilla(players.get(turno).getPosicion());
                 for(int i=0;i<numjugadores;i++){
                     if(i!=turno){
                         if(players.get(i).comprados.contains(players.get(turno).location) && players.get(i).isMuerto()==false){
